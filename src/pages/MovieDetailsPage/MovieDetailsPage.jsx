@@ -9,9 +9,9 @@ import {
     MoviePageDescription,
     DetailsLink
 } from './MovieDetailsPageStyled';
-import {Spinner } from '../AppStyled';
+import {Spinner } from '../../components/AppStyled';
 import { Outlet, useParams, useLocation,useNavigate } from "react-router-dom";
-import GoBackButton from '../GoBackButton/GoBackButton';
+import GoBackButton from '../../components/GoBackButton/GoBackButton';
 
 const MovieDetailsPage = () => {
     const {movieId} = useParams();

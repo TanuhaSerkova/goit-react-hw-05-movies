@@ -1,4 +1,5 @@
 import { HiOutlineEmojiHappy } from 'react-icons/hi';
+import PropTypes from 'prop-types';
 import { CastStyledItem, CastText, ActorsPhoto } from './CastStyled';
 
 export const CastItem = ({ photo, name, character }) => {
@@ -17,4 +18,10 @@ export const CastItem = ({ photo, name, character }) => {
         <CastText>{character}</CastText>
         </CastStyledItem>
     );
+};
+
+CastItem.propTypes = {
+    photo: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    character: PropTypes.string.isRequired,
 };

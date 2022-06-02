@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import * as API from '../../services/api';
 import { ReviewText } from './ReviewsStyled';
 import { ReviewsItem } from './ReviewsItem';
@@ -44,11 +43,6 @@ const Reviews = () => {
         )}
         </>
     );
-};
-
-ReviewsItem.propTypes = {
-    author: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
 };
 
 export default Reviews;

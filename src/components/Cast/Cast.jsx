@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import * as API from '../../services/api';
 import { CastItem } from './CastItem';
 import { CastText,ActorsList } from './CastStyled';
@@ -46,12 +45,6 @@ const Cast = () => {
         )}
         </>
     );
-};
-
-CastItem.propTypes = {
-    photo: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    character: PropTypes.string.isRequired,
 };
 
 export default Cast;

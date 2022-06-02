@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Field } from 'formik';
 import { NavLink } from 'react-router-dom';
-import { CustomButton } from '../GoBackButton/GoBackButton';
+import { CustomButton } from 'components/GoBackButton/GoBackButtonStyled';
 
 export const SearchFormButton = styled(CustomButton)`
     display: inline;

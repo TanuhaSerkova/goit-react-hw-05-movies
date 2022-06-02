@@ -15,7 +15,7 @@ const MoviesPage = () => {
     const [loading, setLoading] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
-    let [queryWord, /* setQueryWord */] = useSearchParams();
+    let [queryWord,] = useSearchParams();
     let keyWord = queryWord.get('query');
 
     //При начальном рендере ключевое слово для поиска пустая строка
@@ -39,12 +39,11 @@ const MoviesPage = () => {
         }
     }, [keyWord]);
 
-    const handleSubmit = (values, { resetForm }) => {
+    const handleSubmit = (values) => {
         getData(values.query);
         navigate({
         search: `?query=${values.query}`,
         });
-        resetForm();
     };
 
     return (

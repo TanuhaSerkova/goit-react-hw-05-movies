@@ -1,4 +1,5 @@
 import { ReviewText, ReviewTitle, ReviewItem } from './ReviewsStyled';
+import PropTypes from 'prop-types';
 
 export const ReviewsItem = ({ author, content }) => {
     return (
@@ -7,4 +8,9 @@ export const ReviewsItem = ({ author, content }) => {
         <ReviewText>{content}</ReviewText>
         </ReviewItem>
     );
+};
+
+ReviewsItem.propTypes = {
+    author: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
 };
