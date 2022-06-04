@@ -8,8 +8,8 @@ import GlobalStyle from '../GlobalStyle';
 import { Container, Spinner } from './AppStyled';
 import Navigation from '../components/Navigation/Navigation';
 
-const HomePage = lazy(() => import('../pages/HomePage'));
-const MoviesPage = lazy(() => import('../pages/MoviesPage'));
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
+const MoviesPage = lazy(() => import('../pages/MoviesPage/MoviesPage'));
 const MovieDataPage = lazy(() => import('../pages/MovieDataPage'));
 const Cast = lazy(() => import('./Cast'));
 const Reviews = lazy(() => import('./Reviews'));

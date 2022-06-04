@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { Formik, Form } from 'formik';
-import * as API from '../services/api';
-import { Spinner } from '../components/AppStyled';
+import * as API from '../../services/api';
+import { Spinner } from '../../components/AppStyled';
 import {
     SearchFormButton,
     SearchFormInput,
     FilmList,
     FilmLink,
-} from '../components/MoviesPage/MoviesPageStyled';
+} from './MoviesPageStyled';
 
 const MoviesPage = () => {
     const [movies, setMovies] = useState(null);
