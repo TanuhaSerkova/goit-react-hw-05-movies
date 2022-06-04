@@ -41,8 +41,10 @@ const MoviesPage = () => {
 
     const handleSubmit = (values) => {
         getData(values.query);
+
         navigate({
-        search: `?query=${values.query}`,
+            ...location,
+            search: `query=${values.query}`,
         });
     };
 
