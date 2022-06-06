@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+//import { toast } from 'react-toastify';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 import * as API from '../../services/api';
@@ -15,7 +16,7 @@ const MoviesPage = () => {
     const [loading, setLoading] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
-    let [queryWord,] = useSearchParams();
+    let [queryWord] = useSearchParams();
     let keyWord = queryWord.get('query');
 
     //При начальном рендере ключевое слово для поиска пустая строка
@@ -38,6 +39,14 @@ const MoviesPage = () => {
         getData(keyWord);
         }
     }, [keyWord]);
+
+    /*const newQuery = e.target.elements.query.value.toLowerCase();
+    if (newQuery.trim() === '') {
+        toast.error("Please, enter correct movie's name");
+        return;
+    }
+    setQueryWord({ query: newQuery });*/
+
 
     const handleSubmit = (values) => {
         getData(values.query);
