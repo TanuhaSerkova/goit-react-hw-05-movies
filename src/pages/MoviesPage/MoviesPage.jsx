@@ -18,9 +18,10 @@ const MoviesPage = () => {
     const navigate = useNavigate();
     let [queryWord] = useSearchParams();
     let keyWord = queryWord.get('query');
+    //const [query, ] = useState(() => JSON.parse(localStorage.getItem('query')) ?? '');
 
     //При начальном рендере ключевое слово для поиска пустая строка
-    const initialValues = { query: '' };
+    const initialValues = { query: '' || keyWord};
 
     const getData = key => {
         setLoading(true);
@@ -33,20 +34,16 @@ const MoviesPage = () => {
         }
         });
     };
+    
+    /*useEffect(() => {
+        localStorage.setItem('query', JSON.stringify(query));
+    }, [query]);*/
 
     useEffect(() => {
         if (keyWord) {
         getData(keyWord);
         }
     }, [keyWord]);
-
-    /*const newQuery = e.target.elements.query.value.toLowerCase();
-    if (newQuery.trim() === '') {
-        toast.error("Please, enter correct movie's name");
-        return;
-    }
-    setQueryWord({ query: newQuery });*/
-
 
     const handleSubmit = (values) => {
         getData(values.query);
